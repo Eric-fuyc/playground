@@ -1,0 +1,11 @@
+<%- include('header', {pageName: "home", userName}) %>
+
+<h2>File Upload</h2>
+<form method="get" action="/upload">
+  <input type="file" name="file" id="file" />
+  <button type="submit">Submit</button>
+</form>
+
+<h2>Your files</h2>
+
+<%- include('footer') %>
