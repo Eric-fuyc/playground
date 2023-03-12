@@ -1,11 +1,25 @@
-<%- include('header', {pageName: "home", userName}) %>
+<%- include('header', {pageName: "home" , userName}) %>
 
-<h2>File Upload</h2>
-<form method="get" action="/upload">
-  <input type="file" name="file" id="file" />
-  <button type="submit">Submit</button>
-</form>
+  <h2>Upload</h2>
+  <form method="post" action="/upload">
+    <p>
+      <input type="file" name="file" id="file" />
+      <input type="submit" value="upload" />
+    </p>
+  </form>
 
-<h2>Your files</h2>
+  <h2>Your files</h2>
 
-<%- include('footer') %>
+  <table>
+    <% ownFiles.forEach(file=> { %>
+      <tr>
+        <td>
+          <%= file.name %>
+        </td>
+        <td><a href="/file/<%= file.id %>">details</a></td>
+        <td><a href="#">download</a></td>
+      </tr>
+      <% }) %>
+  </table>
+
+  <%- include('footer') %>

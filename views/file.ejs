@@ -1,0 +1,22 @@
+<%- include('header', {pageName: `detail of ${name}`}, userName) %>
+
+<h2>
+  Detail of <%= name %>
+</h2>
+
+<p>
+  File name:
+<code><%= name %></code>
+</p>
+
+<p>
+  Share status:
+  <%= shareStatus %>
+</p>
+
+<p>
+  Owner:
+  <a href="#"><%= owner %></a>
+</p>
+
+<%- include('footer') %>
