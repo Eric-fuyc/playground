@@ -1,6 +1,7 @@
 const Router = require('koa-router');
 const { getUserByCtx, getUserByID } = require('../services/user');
-const { getFileByID, getPublicShareByFileID } = require('../services/file');
+const { getFileByID } = require('../services/file');
+const { getPublicShareByFileID, listSharesByUserID } = require('../services/share');
 
 const router = new Router();
 
@@ -8,13 +9,19 @@ const router = new Router();
  * @param {import('../models/file').File} file The File to get.
  */
 const getShareStatus = async file => {
-  // If shared to everyone, shareStatus == 'public'.
+  // If shared to everyone, shareStatus === 'public'.
   const publicShare = await getPublicShareByFileID(file.id);
   if (publicShare) {
     return 'public';
   }
 
-  // Otherwise, shareStatus == 'private'.
+  // If shared but not to everyone, shareStatus === 'shared'
+  const share = await listSharesByUserID(file.id);
+  if (share) {
+    return 'shared';
+  }
+
+  // Otherwise, shareStatus === 'private'.
   return 'private';
 };
 
@@ -30,7 +37,7 @@ router.get('/file/:id', async ctx => {
   const paramID = ctx.params.id;
   const fileID = Number(paramID);
   if (isNaN(fileID) || !isFinite(fileID)) {
-    ctx.throw('Invalid file ID.', 400);
+    ctx.throw(400, 'Invalid file ID.');
   }
 
   // Get the file with the id.
@@ -46,10 +53,10 @@ router.get('/file/:id', async ctx => {
   const shareStatus = await getShareStatus(file);
 
   await ctx.render('file', {
-    userName: user.user_name,
-    name: file.name,
+    user,
+    file,
     shareStatus,
-    owner: owner.name,
+    owner,
   });
 });
 

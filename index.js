@@ -7,6 +7,7 @@ const session = require('koa-session');
 const indexRouter = require('./routers');
 const loginRouter = require('./routers/login');
 const fileRouter = require('./routers/file');
+const userRouter = require('./routers/user');
 
 const app = new Koa();
 
@@ -41,6 +42,7 @@ app.use(
 app.use(indexRouter.routes());
 app.use(loginRouter.routes());
 app.use(fileRouter.routes());
+app.use(userRouter.routes());
 
 app.listen(8000, () => {
   console.log('open server localhost:8000');

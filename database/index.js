@@ -1,16 +1,23 @@
 /* eslint-disable jsdoc/check-tag-names */
 const db = require('./connection');
+const logger = require('debug')('web:database');
 
 const w = (sql, method, hook) => {
   const preparedSQL = db.prepare(sql);
+  logger("prepare SQL [ %s ] '%s'", method, sql);
 
   function wrapper(...params) {
     return new Promise((resolve, reject) => {
       preparedSQL[method](...params, (err, row) => {
+        logger("<== [ %s ] '%s'", method, sql);
+        logger('<== %o', params);
         if (err) {
+          logger('error when excuting: %o', err);
           reject(err);
         }
-        resolve(hook(row));
+        const model = hook(row);
+        logger('==> %o', model);
+        resolve(model);
       });
     });
   }

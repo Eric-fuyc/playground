@@ -1,12 +1,13 @@
-<%- include('header', {pageName: `detail of ${name}`}, userName) %>
+<%- include('header', {pageName: `detail of ${file.name}`}, user) %>
 
 <h2>
-  Detail of <%= name %>
+  Detail of
+  <code><%= file.name %></code>
 </h2>
 
 <p>
   File name:
-<code><%= name %></code>
+  <code><%= file.name %></code>
 </p>
 
 <p>
@@ -16,7 +17,7 @@
 
 <p>
   Owner:
-  <a href="#"><%= owner %></a>
+  <a href="/user/<%= owner.id %>"><%= owner.name %></a>
 </p>
 
 <%- include('footer') %>

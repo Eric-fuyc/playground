@@ -1,5 +1,7 @@
 const { get } = require('../database');
 const { getUserFromDatabaseRow } = require('../models/user');
+const { mustString, mustNumber } = require('../util');
+const logger = require('debug')('servcie:user');
 
 const sqlGetUserByUserName = get(
   'select * from users where user_name = ? and status = 0',
@@ -11,15 +13,15 @@ const sqlGetUserById = get(
 );
 
 /**
- * @param {string} username The username.
+ * @param {string} userName The username.
  */
-exports.getUserByUserName = async username => {
-  if (!username || typeof username !== 'string') {
-    throw Error('invalid username');
-  }
+exports.getUserByUserName = async userName => {
+  logger('getUserByUserName userName=%o', userName);
+  mustString(userName, Error('invalid userName'), userName);
 
-  const user = await sqlGetUserByUserName(username);
+  const user = await sqlGetUserByUserName(userName);
 
+  logger('getUserByUserName returned');
   return user;
 };
 
@@ -27,12 +29,12 @@ exports.getUserByUserName = async username => {
  * @param {number} id The user's ID.
  */
 exports.getUserByID = async id => {
-  if (!id || typeof id !== 'number') {
-    throw Error('invalid id');
-  }
+  logger('getUserByID id=%o', id);
+  mustNumber(id, Error('Invalid userID!'), id);
 
   const user = await sqlGetUserById(id);
 
+  logger('getUserByID returned');
   return user;
 };
 

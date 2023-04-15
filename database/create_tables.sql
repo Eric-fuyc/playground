@@ -19,7 +19,7 @@ create table if not exists files
 create table if not exists shares
 (
   id            integer primary key autoincrement,
-  file_id       varchar(256)                not null,
+  file_id       integer                     not null,
   user_id       integer                     not null,  -- > 0 user, == -1 everyone
   status        tinyint      default 0      not null   -- 0 - normal, 1 - deleted
 );

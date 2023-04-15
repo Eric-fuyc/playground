@@ -1,4 +1,4 @@
-<%- include('header', {pageName: 'login', userName: 'tourist'}) %>
+<%- include('header', {pageName: 'login', user: { name: 'tourist' }}) %>
 
 <% if (wrongPassword) { %>
 <p>Wrong username or password.</p>

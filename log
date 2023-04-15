@@ -1,0 +1,203 @@
+2023-03-25T07:13:29.320Z nodemon bus new listener: reset (0)
+2023-03-25T07:13:29.321Z nodemon bus new listener: reset (0)
+2023-03-25T07:13:29.328Z nodemon bus new listener: quit (0)
+2023-03-25T07:13:29.329Z nodemon bus new listener: quit (0)
+2023-03-25T07:13:29.329Z nodemon bus new listener: restart (0)
+2023-03-25T07:13:29.329Z nodemon bus new listener: restart (0)
+2023-03-25T07:13:29.329Z nodemon bus new listener: boot (0)
+2023-03-25T07:13:29.329Z nodemon bus new listener: boot (0)
+2023-03-25T07:13:29.331Z nodemon bus new listener: reset (2)
+2023-03-25T07:13:29.332Z nodemon bus emit: boot
+2023-03-25T07:13:29.332Z nodemon bus emit: reset
+2023-03-25T07:13:29.332Z nodemon resetting watchers
+2023-03-25T07:13:29.332Z nodemon reset
+2023-03-25T07:13:29.355Z nodemon config: dirs [ '/workspaces/playground' ]
+2023-03-25T07:13:29.360Z nodemon bus new listener: error (0)
+2023-03-25T07:13:29.360Z nodemon bus new listener: error (0)
+2023-03-25T07:13:29.371Z nodemon:run fork sh -c node index.js
+2023-03-25T07:13:29.372Z nodemon bus new listener: exit (0)
+2023-03-25T07:13:29.372Z nodemon bus new listener: exit (0)
+2023-03-25T07:13:29.372Z nodemon:run start watch on: [ '*.*', re: /.*\..*/ ]
+2023-03-25T07:13:29.373Z nodemon start watch on: /workspaces/playground
+2023-03-25T07:13:29.373Z nodemon ignored [
+  '**/.git/**',
+  '**/.nyc_output/**',
+  '**/.sass-cache/**',
+  '**/bower_components/**',
+  '**/coverage/**',
+  '**/node_modules/**',
+  re: /.*.*\/\.git\/.*.*|.*.*\/\.nyc_output\/.*.*|.*.*\/\.sass\-cache\/.*.*|.*.*\/bower_components\/.*.*|.*.*\/coverage\/.*.*|.*.*\/node_modules\/.*.*/
+]
+2023-03-25T07:13:29.396Z nodemon:watch chokidar watching: /workspaces/playground/config.js
+2023-03-25T07:13:29.397Z nodemon:watch chokidar watching: /workspaces/playground/database.db3
+2023-03-25T07:13:29.397Z nodemon:watch chokidar watching: /workspaces/playground/index.js
+2023-03-25T07:13:29.398Z nodemon:watch chokidar watching: /workspaces/playground/log
+2023-03-25T07:13:29.398Z nodemon:watch chokidar watching: /workspaces/playground/package-lock.json
+2023-03-25T07:13:29.398Z nodemon:watch chokidar watching: /workspaces/playground/package.json
+2023-03-25T07:13:29.411Z nodemon:watch filterAndRestart on [ 'log' ]
+2023-03-25T07:13:29.411Z nodemon:match rules [
+  '!**/**/node_modules/**',
+  '!**/**/coverage/**',
+  '!**/**/bower_components/**',
+  '!**/**/.sass-cache/**',
+  '!**/**/.nyc_output/**',
+  '!**/**/.git/**',
+  '**/*.*'
+]
+2023-03-25T07:13:29.415Z nodemon:match matched /workspaces/playground/log rule: **/*.*
+2023-03-25T07:13:29.421Z nodemon:match good []
+2023-03-25T07:13:29.422Z nodemon:watch matched? {"result":[],"ignored":1,"watched":0,"total":1}
+2023-03-25T07:13:29.438Z nodemon:watch chokidar watching: /workspaces/playground/database/connection.js
+2023-03-25T07:13:29.438Z nodemon:watch chokidar watching: /workspaces/playground/database/create_tables.sql
+2023-03-25T07:13:29.438Z nodemon:watch chokidar watching: /workspaces/playground/database/index.js
+2023-03-25T07:13:29.439Z nodemon:watch chokidar watching: /workspaces/playground/database/mock.sql
+2023-03-25T07:13:29.439Z nodemon:watch chokidar watching: /workspaces/playground/files/1
+2023-03-25T07:13:29.445Z nodemon:watch chokidar watching: /workspaces/playground/files/2
+2023-03-25T07:13:29.449Z nodemon:watch chokidar watching: /workspaces/playground/files/3
+2023-03-25T07:13:29.449Z nodemon:watch chokidar watching: /workspaces/playground/files/4
+2023-03-25T07:13:29.455Z nodemon:watch chokidar watching: /workspaces/playground/models/file.js
+2023-03-25T07:13:29.455Z nodemon:watch chokidar watching: /workspaces/playground/models/share.js
+2023-03-25T07:13:29.455Z nodemon:watch chokidar watching: /workspaces/playground/models/user.js
+2023-03-25T07:13:29.456Z nodemon:watch chokidar watching: /workspaces/playground/routers/file.js
+2023-03-25T07:13:29.456Z nodemon:watch chokidar watching: /workspaces/playground/routers/index.js
+2023-03-25T07:13:29.456Z nodemon:watch chokidar watching: /workspaces/playground/routers/login.js
+2023-03-25T07:13:29.456Z nodemon:watch chokidar watching: /workspaces/playground/routers/user.js
+2023-03-25T07:13:29.457Z nodemon:watch chokidar watching: /workspaces/playground/services/file.js
+2023-03-25T07:13:29.457Z nodemon:watch chokidar watching: /workspaces/playground/services/share.js
+2023-03-25T07:13:29.457Z nodemon:watch chokidar watching: /workspaces/playground/services/user.js
+2023-03-25T07:13:29.458Z nodemon:watch chokidar watching: /workspaces/playground/util/index.js
+2023-03-25T07:13:29.458Z nodemon:watch chokidar watching: /workspaces/playground/views/error.ejs
+2023-03-25T07:13:29.458Z nodemon:watch chokidar watching: /workspaces/playground/views/file.ejs
+2023-03-25T07:13:29.459Z nodemon:watch chokidar watching: /workspaces/playground/views/footer.ejs
+2023-03-25T07:13:29.459Z nodemon:watch chokidar watching: /workspaces/playground/views/header.ejs
+2023-03-25T07:13:29.459Z nodemon:watch chokidar watching: /workspaces/playground/views/index.ejs
+2023-03-25T07:13:29.459Z nodemon:watch chokidar watching: /workspaces/playground/views/login.ejs
+2023-03-25T07:13:29.460Z nodemon:watch chokidar watching: /workspaces/playground/views/user.ejs
+2023-03-25T07:13:29.460Z nodemon watch is complete
+2023-03-25T07:13:29.475Z nodemon:watch filterAndRestart on [ 'log' ]
+2023-03-25T07:13:29.475Z nodemon:match rules [
+  '!**/**/.git/**',
+  '!**/**/.nyc_output/**',
+  '!**/**/.sass-cache/**',
+  '!**/**/bower_components/**',
+  '!**/**/coverage/**',
+  '!**/**/node_modules/**',
+  '**/*.*'
+]
+2023-03-25T07:13:29.477Z nodemon:match matched /workspaces/playground/log rule: **/*.*
+2023-03-25T07:13:29.477Z nodemon:match good []
+2023-03-25T07:13:29.477Z nodemon:watch matched? {"result":[],"ignored":1,"watched":0,"total":1}
+2023-03-25T07:13:29.762Z web:database prepare SQL [ get ] 'select * from users where user_name = ? and status = 0'
+2023-03-25T07:13:29.763Z web:database prepare SQL [ get ] 'select * from users where id = ? and status = 0'
+2023-03-25T07:13:29.763Z nodemon:watch filterAndRestart on [ 'log' ]
+2023-03-25T07:13:29.764Z nodemon:match rules [
+  '!**/**/node_modules/**',
+  '!**/**/coverage/**',
+  '!**/**/bower_components/**',
+  '!**/**/.sass-cache/**',
+  '!**/**/.nyc_output/**',
+  '!**/**/.git/**',
+  '**/*.*'
+]
+2023-03-25T07:13:29.764Z nodemon:match matched /workspaces/playground/log rule: **/*.*
+2023-03-25T07:13:29.765Z nodemon:match good []
+2023-03-25T07:13:29.765Z nodemon:watch matched? {"result":[],"ignored":1,"watched":0,"total":1}
+2023-03-25T07:13:29.765Z web:database prepare SQL [ all ] 'select * from files where user_id = ? and status = 0'
+2023-03-25T07:13:29.765Z web:database prepare SQL [ get ] 'select * from files where id = ? and status = 0'
+2023-03-25T07:13:29.766Z web:database prepare SQL [ get ] 'select * from shares where file_id = ? and user_id = -1 and status = 0'
+2023-03-25T07:13:29.766Z web:database prepare SQL [ all ] 'select * from shares where user_id = -1 and status = 0'
+2023-03-25T07:13:29.766Z web:database prepare SQL [ all ] 'select * from shares where file_id = ? and status = 0'
+2023-03-25T07:13:29.766Z web:database prepare SQL [ get ] 'select * from shares where file_id = ? and user_id = ? and status = 0;'
+2023-03-25T07:13:29.767Z web:database prepare SQL [ all ] 'select * from shares where user_id = ? and status = 0'
+2023-03-25T07:13:29.768Z koa-router defined route [ 'HEAD', 'GET' ] /
+2023-03-25T07:13:29.771Z koa-router defined route [ 'HEAD', 'GET' ] /login
+2023-03-25T07:13:29.772Z koa-router defined route [ 'POST' ] /login
+2023-03-25T07:13:29.773Z koa-router defined route [ 'HEAD', 'GET' ] /file/:id
+2023-03-25T07:13:29.773Z koa-router defined route [ 'HEAD', 'GET' ] /user/:id
+2023-03-25T07:13:29.775Z koa-static static "/workspaces/playground/static" {}
+2023-03-25T07:13:29.775Z koa:application use serve
+2023-03-25T07:13:29.776Z koa:application use views
+2023-03-25T07:13:29.776Z koa:application use -
+2023-03-25T07:13:29.776Z koa-session session options {"key":"1402f2c6-60ab-484f-a9ae-becfefe7deb2","maxAge":86400000,"httpOnly":true,"rolling":true,"overwrite":true,"signed":true,"autoCommit":true}
+2023-03-25T07:13:29.777Z koa:application use session
+2023-03-25T07:13:29.777Z koa:application use dispatch
+2023-03-25T07:13:29.777Z koa:application use dispatch
+2023-03-25T07:13:29.777Z koa:application use dispatch
+2023-03-25T07:13:29.778Z koa:application use dispatch
+2023-03-25T07:13:29.778Z koa:application listen
+2023-03-25T07:13:38.089Z koa-send send "/user/2" {"root":"/workspaces/playground/static","index":"index.html"}
+2023-03-25T07:13:38.091Z nodemon:watch filterAndRestart on [ 'log' ]
+2023-03-25T07:13:38.092Z nodemon:match rules [
+  '!**/**/.git/**',
+  '!**/**/.nyc_output/**',
+  '!**/**/.sass-cache/**',
+  '!**/**/bower_components/**',
+  '!**/**/coverage/**',
+  '!**/**/node_modules/**',
+  '**/*.*'
+]
+2023-03-25T07:13:38.092Z nodemon:match matched /workspaces/playground/log rule: **/*.*
+2023-03-25T07:13:38.093Z nodemon:match good []
+2023-03-25T07:13:38.093Z nodemon:watch matched? {"result":[],"ignored":1,"watched":0,"total":1}
+2023-03-25T07:13:38.094Z koa-router GET /user/2
+2023-03-25T07:13:38.094Z koa-router test / /^\/[\/#\?]?$/i
+2023-03-25T07:13:38.095Z koa-router GET /user/2
+2023-03-25T07:13:38.095Z koa-router test /login /^\/login[\/#\?]?$/i
+2023-03-25T07:13:38.095Z koa-router test /login /^\/login[\/#\?]?$/i
+2023-03-25T07:13:38.096Z koa-router GET /user/2
+2023-03-25T07:13:38.096Z koa-router test /file/:id /^\/file(?:\/([^\/#\?]+?))[\/#\?]?$/i
+2023-03-25T07:13:38.096Z koa-router GET /user/2
+2023-03-25T07:13:38.096Z koa-router test /user/:id /^\/user(?:\/([^\/#\?]+?))[\/#\?]?$/i
+2023-03-25T07:13:38.097Z koa-session:context init from cookie
+2023-03-25T07:13:38.099Z koa-session:context parse eyJ1c2VySWQiOjEsIl9leHBpcmUiOjE2Nzk4MTQ2OTA2MTcsIl9tYXhBZ2UiOjg2NDAwMDAwfQ==
+2023-03-25T07:13:38.100Z koa-session:context parsed {"userId":1,"_expire":1679814690617,"_maxAge":86400000}
+2023-03-25T07:13:38.100Z koa-session:context create session with val: {"userId":1,"_expire":1679814690617,"_maxAge":86400000} externalKey: undefined
+2023-03-25T07:13:38.101Z servcie:user getUserByID id=1
+2023-03-25T07:13:38.101Z web:database <== [ get ] 'select * from users where id = ? and status = 0'
+2023-03-25T07:13:38.102Z web:database <== [ 1 ]
+2023-03-25T07:13:38.102Z web:database ==> { id: 1, name: 'amy', password: 'passworda', role: '0', status: 0 }
+2023-03-25T07:13:38.102Z servcie:user getUserByID returned
+2023-03-25T07:13:38.102Z servcie:user getUserByID id=2
+2023-03-25T07:13:38.103Z web:database <== [ get ] 'select * from users where id = ? and status = 0'
+2023-03-25T07:13:38.103Z web:database <== [ 2 ]
+2023-03-25T07:13:38.103Z web:database ==> { id: 2, name: 'bob', password: 'passwordb', role: '0', status: 0 }
+2023-03-25T07:13:38.103Z servcie:user getUserByID returned
+2023-03-25T07:13:38.104Z service:file listFileByUserID userID=2
+2023-03-25T07:13:38.104Z servcie:user getUserByID id=2
+2023-03-25T07:13:38.104Z web:database <== [ all ] 'select * from files where user_id = ? and status = 0'
+2023-03-25T07:13:38.104Z web:database <== [ 2 ]
+2023-03-25T07:13:38.105Z web:database ==> [ { id: 2, name: 'ptest.txt', ownerID: 2, status: 0 } ]
+2023-03-25T07:13:38.105Z service:file listFileByUserID returned
+2023-03-25T07:13:38.105Z service:share getPublicShareByFileID fileID=2
+2023-03-25T07:13:38.105Z service:file getFileByID id=2
+2023-03-25T07:13:38.106Z service:share getShareByFileIDAndUserID fileID=2, userID=2
+2023-03-25T07:13:38.106Z service:file getFileByID id=2
+2023-03-25T07:13:38.107Z web:database <== [ get ] 'select * from users where id = ? and status = 0'
+2023-03-25T07:13:38.107Z web:database <== [ 2 ]
+2023-03-25T07:13:38.107Z web:database ==> { id: 2, name: 'bob', password: 'passwordb', role: '0', status: 0 }
+2023-03-25T07:13:38.108Z servcie:user getUserByID returned
+2023-03-25T07:13:38.108Z web:database <== [ get ] 'select * from files where id = ? and status = 0'
+2023-03-25T07:13:38.108Z web:database <== [ 2 ]
+2023-03-25T07:13:38.108Z web:database ==> { id: 2, name: 'ptest.txt', ownerID: 2, status: 0 }
+2023-03-25T07:13:38.109Z service:file getFileByID returned
+2023-03-25T07:13:38.109Z web:database <== [ get ] 'select * from files where id = ? and status = 0'
+2023-03-25T07:13:38.109Z web:database <== [ 2 ]
+2023-03-25T07:13:38.110Z web:database ==> { id: 2, name: 'ptest.txt', ownerID: 2, status: 0 }
+2023-03-25T07:13:38.110Z service:file getFileByID returned
+2023-03-25T07:13:38.110Z service:file getFileByID id=2
+2023-03-25T07:13:38.110Z web:database <== [ get ] 'select * from shares where file_id = ? and user_id = -1 and status = 0'
+2023-03-25T07:13:38.111Z web:database <== [ 2 ]
+2023-03-25T07:13:38.111Z web:database ==> { fileID: 2, userID: -1, status: 0 }
+2023-03-25T07:13:38.111Z service:share getPublicShareByFileID returned
+2023-03-25T07:13:38.112Z koa-views render `user.ejs` with {"target":{"id":2,"name":"bob","password":"passwordb","role":"0","status":0},"publicFiles":[{"id":2,"name":"ptest.txt","ownerID":2,"status":0}],"sharedFiles":[null],"user":{"id":1,"name":"amy","password":"passworda","role":"0","status":0},"partials":{}}
+2023-03-25T07:13:38.115Z web:database <== [ get ] 'select * from files where id = ? and status = 0'
+2023-03-25T07:13:38.115Z web:database <== [ 2 ]
+2023-03-25T07:13:38.115Z web:database ==> { id: 2, name: 'ptest.txt', ownerID: 2, status: 0 }
+2023-03-25T07:13:38.115Z service:file getFileByID returned
+2023-03-25T07:13:38.115Z service:share getShareByFileIDAndUserID returned
+2023-03-25T07:13:38.116Z web:database <== [ get ] 'select * from shares where file_id = ? and user_id = ? and status = 0;'
+2023-03-25T07:13:38.116Z web:database <== [ 2, 2 ]
+2023-03-25T07:13:38.116Z web:database ==> undefined
+2023-03-25T07:13:38.125Z koa-session:context should save session: rolling
+2023-03-25T07:13:38.126Z koa-session:context save {"userId":1,"_expire":1679814818126,"_maxAge":86400000} to cookie
+2023-03-25T07:13:38.126Z koa-session:context save eyJ1c2VySWQiOjEsIl9leHBpcmUiOjE2Nzk4MTQ4MTgxMjYsIl9tYXhBZ2UiOjg2NDAwMDAwfQ==

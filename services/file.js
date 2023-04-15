@@ -1,7 +1,8 @@
 const { get, all } = require('../database');
 const { getUserByID } = require('./user');
 const { getFileFromDatabaseRow } = require('../models/file');
-const { getShareFromDatabaseRow } = require('../models/share');
+const { mustNumber, mustDefined } = require('../util');
+const logger = require('debug')('service:file');
 
 const sqlListFilesByUserID = all(
   'select * from files where user_id = ? and status = 0',
@@ -13,23 +14,20 @@ const sqlGetFileByID = get(
   getFileFromDatabaseRow
 );
 
-const sqlGetPublicShareByFileID = get(
-  'select * from shares where file_id = ? and user_id = -1 and status = 0',
-  getShareFromDatabaseRow
-);
 
 /**
  * @param {number} userID er's ID.
  */
 const listFilesByUserID = async userID => {
+  logger('listFileByUserID userID=%o', userID);
+
   // Check if user exists.
   const user = getUserByID(userID);
-  if (!user) {
-    throw Error('User not found!');
-  }
+  mustDefined(user, Error('User not found!'), userID);
 
   const files = await sqlListFilesByUserID(userID);
 
+  logger('listFileByUserID returned');
   return files;
 };
 
@@ -37,38 +35,17 @@ const listFilesByUserID = async userID => {
  * @param {number} id File's Id.
  */
 const getFileByID = async id => {
+  logger('getFileByID id=%o', id);
   // Validate ID.
-  if (!id || typeof id !== 'number') {
-    throw Error('Invalid ID!');
-  }
+  mustNumber(id, Error('Invalid file ID!'), id);
 
   const file = await sqlGetFileByID(id);
 
+  logger('getFileByID returned');
   return file;
-};
-
-/**
- * @param {number} fileID File's ID
- */
-const getPublicShareByFileID = async fileID => {
-  // Validate file ID.
-  if (!fileID || typeof fileID !== 'number') {
-    throw Error('Invalid ID!');
-  }
-
-  // Check if file exists
-  const file = await getFileByID(fileID);
-  if (!file) {
-    throw Error('File not found!');
-  }
-
-  const share = await sqlGetPublicShareByFileID(file.id);
-
-  return share;
 };
 
 module.exports = {
   listFilesByUserID,
   getFileByID,
-  getPublicShareByFileID,
 };
